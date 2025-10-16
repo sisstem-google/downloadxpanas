@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Download - Xpanas.Avcode.biz.id</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #1e1e2f, #2c2c54);
+      color: white;
+      text-align: center;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 25px;
+      background: rgba(0,0,0,0.4);
+    }
+    .logo {
+      font-weight: bold;
+      color: #ffcc00;
+      font-size: 1.3em;
+    }
+    .menu-btn {
+      font-size: 1.8em;
+      cursor: pointer;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      right: -250px;
+      width: 200px;
+      height: 100%;
+      background: #2c2c54;
+      transition: .3s;
+      display: flex;
+      flex-direction: column;
+      padding-top: 60px;
+      z-index: 100;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 15px;
+      transition: .3s;
+    }
+    nav a:hover {
+      background: #ffcc00;
+      color: #1e1e2f;
+    }
+    nav.active { right: 0; }
+
+    .container {
+      padding: 60px 20px;
+    }
+    .countdown {
+      font-size: 2em;
+      margin: 30px 0;
+    }
+    .download-btn {
+      background: #ffcc00;
+      color: #1e1e2f;
+      border: none;
+      padding: 15px 40px;
+      border-radius: 50px;
+      font-size: 1.1em;
+      cursor: not-allowed;
+      opacity: .5;
+      transition: .3s;
+    }
+    .download-btn.active {
+      opacity: 1;
+      cursor: pointer;
+    }
+    .ad-container {
+      margin: 30px auto;
+      padding: 10px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 10px;
+      width: 90%;
+      max-width: 728px;
+    }
+    footer {
+      margin-top: 50px;
+      font-size: .9em;
+      opacity: .8;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">🔥 Xpanas.Avcode.biz.id Download</div>
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+  </header>
+
+  <nav id="menu">
+    <a href="https://avcode.biz.id/">Avcode</a>
+    <a href="https://xpanas.avcode.biz.id/">Xpanas</a>
+    <a href="https://xpanas.avcode.biz.id/download/app/index.html">Download App</a>
+  </nav>
+
+  <div class="container">
+    <h2>Persiapkan Download Anda</h2>
+    <p>File akan siap dalam:</p>
+    <div class="countdown" id="countdown">10</div>
+    <button id="downloadBtn" class="download-btn">please wait a moment...</button>
+
+    <div class="ad-container">
+    </div>
+
+    <footer>&copy; 2025 Xpanas.Avcode.biz.id | Halaman Download Otomatis</footer>
+  </div>
+
+  <script>
+    function toggleMenu(){
+      document.getElementById("menu").classList.toggle("active");
+    }
+
+    const countdown = document.getElementById("countdown");
+    const downloadBtn = document.getElementById("downloadBtn");
+    let timeLeft = 10;
+
+    // Countdown awal
+    const timer = setInterval(()=>{
+      timeLeft--;
+      countdown.textContent = timeLeft;
+      if(timeLeft<=0){
+        clearInterval(timer);
+        countdown.textContent = "Siap!";
+        downloadBtn.textContent = "Download Sekarang";
+        downloadBtn.classList.add("active");
+      }
+    },1000);
+
+    downloadBtn.addEventListener("click", ()=>{
+      if(!downloadBtn.classList.contains("active")) return;
+
+      downloadBtn.textContent = "please wait a moment...";
+      downloadBtn.disabled = true;
+
+      // 1️⃣ Otomatis buka halaman iklan (tab baru)
+      window.open("https://shorterwanderer.com/tnhjisk9?key=daf817598fdfda29223cbc65e420277e", "_blank");
+
+      // 2️⃣ Tunggu beberapa detik sebelum download dimulai
+      setTimeout(()=>{
+        downloadBtn.textContent = "Download File...";
+        window.location.href = "https://cdn.videy.co/XelUKRBk1.mp4"; // Ganti ke link file kamu
+      },5000); // 5 detik menunggu iklan
+    });
+  </script>
+</body>
+</html>
